@@ -1,0 +1,10 @@
+
+IMAGE_NAME=redis
+
+IMAGE_VERSION=7.2.4-nanoserver-20H2
+
+CONFIG_DIR=C:\Docker\Redis7.2.4-Homebrew\conf
+
+DATA_DIR=C:\Docker\Redis7.2.4-Homebrew\data
+
+COMPOSE_CONVERT_WINDOWS_PATHS=0

@@ -8,10 +8,13 @@ services:
     container_name:
         redis
     ports:
-      - "6379:6379"
+      - 6379:6379
+    command:
+      ["redis-server",  "c:\\conf\\redis.conf"]
     volumes:
-      - ${DATA_DIR}:c:\data
+      - ${CONFIG_DIR}:c:\conf:ro
+      - ${DATA_DIR}:c:\data:rw
 
 #
-# EOF (2024/04/15)
+# EOF (2024/06/18)
 #

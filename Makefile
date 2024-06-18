@@ -14,12 +14,13 @@ help:
 	@echo
 	@echo "Usage: make TARGET"
 	@echo
-	@echo "Redis Dockerize project automation helper for Windows version 1.1"
+	@echo "Redis Dockerize project automation helper for Windows version 1.2"
 	@echo
 	@echo "Targets:"
 	@echo "	build		build custom image"
 	@echo "	up  		start the server"
-	@echo "	down 		stop the server"
+	@echo "	down 		stop the server"	
+	@echo "	cmd		run server cmd"
 	@echo "	ps 		show running containers"
 	@echo "	logs		server logs"
 	@echo "	config		edit configuration"
@@ -43,6 +44,12 @@ down:
 	docker-compose down -v
 
 #
+# run server cmd
+#
+cmd:
+	docker-compose exec redis cmd
+
+#
 # show running containers 
 #
 ps:
@@ -61,5 +68,5 @@ config:
 	nano .env
 
 #
-# EOF (2022/04/08)
+# EOF (2024/06/18)
 #
