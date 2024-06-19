@@ -14,7 +14,7 @@ help:
 	@echo
 	@echo "Usage: make TARGET"
 	@echo
-	@echo "Redis Dockerize project automation helper for Windows version 1.2"
+	@echo "Redis Dockerize project automation helper for Windows version 1.3"
 	@echo
 	@echo "Targets:"
 	@echo "	build		build custom image"
@@ -23,6 +23,7 @@ help:
 	@echo "	cmd		run server cmd"
 	@echo "	ps 		show running containers"
 	@echo "	logs		server logs"
+	@echo "	prune		clear server logs"	
 	@echo "	config		edit configuration"
 
 #
@@ -60,7 +61,15 @@ ps:
 #
 logs:
 #	docker-compose logs
-	docker-compose exec redis cmd //C "type c:\\Data\\redis.log"
+#	docker-compose exec redis cmd //C "type c:\\Data\\redis.log"
+	cmd /C type ${DATA_DIR}\redis.log
+
+#
+# clear server logs
+#
+prune:
+	cmd /C del /Q ${DATA_DIR}\redis.log 
+
 
 #
 # edit configuration
