@@ -59,7 +59,8 @@ ps:
 # server logs
 #
 logs:
-	docker-compose logs
+#	docker-compose logs
+	docker-compose exec redis cmd //C "type c:\\Data\\redis.log"
 
 #
 # edit configuration
@@ -68,5 +69,5 @@ config:
 	nano .env
 
 #
-# EOF (2024/06/18)
+# EOF (2024/06/19)
 #
