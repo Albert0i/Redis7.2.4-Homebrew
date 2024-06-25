@@ -1,17 +1,7 @@
-### redis
+### Redis7.2.4-Homebrew
 
-### .env
-Extract `Redis-x64-7.2.4.zip` and create a .env file with the following settings: 
+Rename `dotenv` to `.env` and set parameters accordingly. 
 
-```
-# image name
-IMAGE_NAME=redis
+![alt make](make.JPG)
 
-# image version
-IMAGE_VERSION=7.2.4-nanoserver-20H2
-
-# data directory
-DATA_DIR=C:\data
-
-COMPOSE_CONVERT_WINDOWS_PATHS=0
-```
+The rest is history... 
