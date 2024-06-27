@@ -7,4 +7,8 @@ CONFIG_DIR=C:\Docker\Redis7.2.4-Homebrew\conf
 
 DATA_DIR=C:\Docker\Redis7.2.4-Homebrew\data
 
+AUTH_USER=alberto
+
+AUTH_PASS=123456
+
 COMPOSE_CONVERT_WINDOWS_PATHS=0
